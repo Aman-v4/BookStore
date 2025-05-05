@@ -1,31 +1,38 @@
 import React from 'react';
 import Navbar from '../Components/Navbar';
+import Footer from '../Components/Footer';
 
 const LandingPage = () => {
     const genres = [
         {
             id: 1,
             name: "Fiction",
+            bgImage:"superman.jpg",
         },
         {
             id: 2,
             name: "Thriller",
+            bgImage:"thriller.jpg",
         },
         {
             id: 3,
             name: "Technology",
+            bgImage:"tech.jpg",
         },
         {
             id: 4,
             name: "Romance",
+            bgImage:"romance.jpg",
         },
         {
             id: 5,
             name: "Philosophy",
+            bgImage:"philosophy.jpg",
         },
         {
             id: 6,
             name: "Manga",
+            bgImage:"manga.jpg",
         },
     ];
 
@@ -120,11 +127,22 @@ const LandingPage = () => {
                         Which Genre Are You Interested In?
                     </p>
                 </div>
-                <div className="mt-16 grid grid-cols-2 gap-y-8 sm:grid-cols-4 h-fit sm:gap-x-8 lg:grid-cols-4 lg:gap-x-8">
+                <div className="mt-16 grid grid-cols-2 gap-y-8 sm:grid-cols-4  h-fit lg:grid-cols-6 ">
                     {genres.map((genre) => (
-                    <div key={genre.id} className=' bg-gray-200 w-full h-fit p-4 rounded-lg flex justify-center hover:bg-indigo-600 hover:scale-95 active:scale-90 transition duration-300 group cursor-pointer'>
-                        <h3 className='text-lg group-hover:text-white font-semibold'>{genre.name}</h3>
-                    </div>
+                        <div
+                        key={genre.id}
+                        className="relative w-full h-56 transition duration-300 ease-in-out active:scale-90 hover:scale-95 overflow-hidden cursor-pointer group"
+                        style={{
+                            backgroundImage: `url(${genre.bgImage})`,
+                            backgroundSize: 'cover',
+                            backgroundPosition: 'center',
+                        }}
+                        >
+                        {/* Sliding overlay on hover */}
+                        <div className="absolute inset-x-0 bottom-0 translate-y-full  group-hover:translate-y-0 transition-transform duration-300 bg-indigo-200/70 h-full flex items-center justify-center">
+                            <h3 className="text-xl font-semibold text-gray-900">{genre.name}</h3>
+                        </div>
+                        </div>
                     ))}
                 </div>
             </div>
@@ -142,27 +160,8 @@ const LandingPage = () => {
 
             <div className='mx-auto mt-20 max-w-screen-xl px-4 sm:px-6 lg:px-8 grid grid-cols-2 gap-y-8 sm:grid-cols-3 h-fit sm:gap-x-8 lg:grid-cols-4 lg:gap-x-8'>
                 {products.map((product) => (
-                    <a href="#" key={product.id} className="group relative block overflow-hidden">
-                        <button
-                            className="absolute end-4 top-4 z-10 hover:bg-pink-400 transition duration-300 rounded-full bg-white p-1.5 text-gray-900 transition hover:text-gray-900/75"
-                        >
-                            <span className="sr-only">Wishlist</span>
-
-                            <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            strokeWidth="1.5"
-                            stroke="currentColor"
-                            className="size-4"
-                            >
-                            <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
-                            />
-                            </svg>
-                        </button>
+                    <a href="#" key={product.id} className="group relative border border-gray-200 block overflow-hidden">
+                        
 
                         <img
                             src={product.image}
@@ -170,8 +169,30 @@ const LandingPage = () => {
                             className="h-64 w-full object-contain transition duration-500 group-hover:scale-105 sm:h-72"
                         />
 
-                        <div className="relative border border-gray-100 bg-white p-6">
-                            <span className="bg-yellow-400 px-3 py-1.5 text-xs font-medium whitespace-nowrap">{product.label}</span>
+                        <div className="relative  bg-white p-6">
+                            <div className='flex justify-between'>
+                                <span className="bg-yellow-200 px-3 py-1.5 text-xs font-medium whitespace-nowrap">{product.label}</span>
+                                <button
+                                className=" hover:bg-pink-400 transition duration-300 rounded-full bg-gray-200 p-1.5 text-gray-900 transition hover:text-gray-900/75"
+                            >
+                                <span className="sr-only">Wishlist</span>
+
+                                <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                strokeWidth="1.5"
+                                stroke="currentColor"
+                                className="size-4"
+                                >
+                                <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
+                                />
+                                </svg>
+                                </button>
+                            </div>
 
                             <h3 className="mt-4 text-lg font-medium text-gray-900">{product.name}</h3>
 
@@ -179,7 +200,7 @@ const LandingPage = () => {
 
                             <form className="mt-4">
                                 <button
-                                    className="block w-full rounded-sm bg-yellow-400 p-4 text-sm font-medium transition hover:scale-105"
+                                    className="block w-full rounded-sm bg-indigo-600 text-white hover:bg-indigo-500 p-4 text-sm font-medium transition hover:scale-95 active:scale-90 duration-300 ease-in-out"
                                 >
                                     Add to Cart
                                 </button>
@@ -189,6 +210,8 @@ const LandingPage = () => {
                 ))}
             </div>
         </section>
+
+        <Footer/>
 
         </>
     );

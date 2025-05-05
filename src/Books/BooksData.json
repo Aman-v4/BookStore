@@ -1,0 +1,403 @@
+[
+    {
+      "id": 1,
+      "image": "thriller1.jpg",
+      "name": "The Silent Patient",
+      "author": "Alex Michaelides",
+      "price": 20.0,
+      "discounted_price": 14.0,
+      "discount_rate": "30%",
+      "genre": "Thriller"
+    },
+    {
+      "id": 2,
+      "image": "thriller2.jpg",
+      "name": "Gone Girl",
+      "author": "Gillian Flynn",
+      "price": 18.0,
+      "discounted_price": 12.6,
+      "discount_rate": "30%",
+      "genre": "Thriller"
+    },
+    {
+      "id": 3,
+      "image": "thriller3.jpg",
+      "name": "The Girl on the Train",
+      "author": "Paula Hawkins",
+      "price": 22.0,
+      "discounted_price": 15.4,
+      "discount_rate": "30%",
+      "genre": "Thriller"
+    },
+    {
+      "id": 4,
+      "image": "thriller4.jpg",
+      "name": "Before I Go to Sleep",
+      "author": "S.J. Watson",
+      "price": 19.0,
+      "discounted_price": 13.3,
+      "discount_rate": "30%",
+      "genre": "Thriller"
+    },
+    {
+      "id": 5,
+      "image": "thriller5.jpg",
+      "name": "The Couple Next Door",
+      "author": "Shari Lapena",
+      "price": 17.0,
+      "discounted_price": 11.9,
+      "discount_rate": "30%",
+      "genre": "Thriller"
+    },
+    {
+      "id": 6,
+      "image": "thriller6.jpg",
+      "name": "Behind Closed Doors",
+      "author": "B.A. Paris",
+      "price": 21.0,
+      "discounted_price": 14.7,
+      "discount_rate": "30%",
+      "genre": "Thriller"
+    },
+    {
+      "id": 7,
+      "image": "thriller7.jpg",
+      "name": "The Reversal",
+      "author": "Michael Connelly",
+      "price": 23.0,
+      "discounted_price": 16.1,
+      "discount_rate": "30%",
+      "genre": "Thriller"
+    },
+    {
+      "id": 8,
+      "image": "manga1.jpg",
+      "name": "Naruto Vol. 1",
+      "author": "Masashi Kishimoto",
+      "price": 10.0,
+      "discounted_price": 7.0,
+      "discount_rate": "30%",
+      "genre": "Manga"
+    },
+    {
+      "id": 9,
+      "image": "manga2.jpg",
+      "name": "Attack on Titan Vol. 1",
+      "author": "Hajime Isayama",
+      "price": 12.0,
+      "discounted_price": 8.4,
+      "discount_rate": "30%",
+      "genre": "Manga"
+    },
+    {
+      "id": 10,
+      "image": "manga3.jpg",
+      "name": "Death Note Vol. 1",
+      "author": "Tsugumi Ohba",
+      "price": 11.0,
+      "discounted_price": 7.7,
+      "discount_rate": "30%",
+      "genre": "Manga"
+    },
+    {
+      "id": 11,
+      "image": "manga4.jpg",
+      "name": "One Piece Vol. 1",
+      "author": "Eiichiro Oda",
+      "price": 13.0,
+      "discounted_price": 9.1,
+      "discount_rate": "30%",
+      "genre": "Manga"
+    },
+    {
+      "id": 12,
+      "image": "manga5.jpg",
+      "name": "Bleach Vol. 1",
+      "author": "Tite Kubo",
+      "price": 10.0,
+      "discounted_price": 7.0,
+      "discount_rate": "30%",
+      "genre": "Manga"
+    },
+    {
+      "id": 13,
+      "image": "manga6.jpg",
+      "name": "Demon Slayer Vol. 1",
+      "author": "Koyoharu Gotouge",
+      "price": 14.0,
+      "discounted_price": 9.8,
+      "discount_rate": "30%",
+      "genre": "Manga"
+    },
+    {
+      "id": 14,
+      "image": "manga7.jpg",
+      "name": "My Hero Academia Vol. 1",
+      "author": "Kohei Horikoshi",
+      "price": 13.0,
+      "discounted_price": 9.1,
+      "discount_rate": "30%",
+      "genre": "Manga"
+    },
+    {
+      "id": 15,
+      "image": "romance1.jpg",
+      "name": "The Notebook",
+      "author": "Nicholas Sparks",
+      "price": 16.0,
+      "discounted_price": 11.2,
+      "discount_rate": "30%",
+      "genre": "Romance"
+    },
+    {
+      "id": 16,
+      "image": "romance2.jpg",
+      "name": "Me Before You",
+      "author": "Jojo Moyes",
+      "price": 18.0,
+      "discounted_price": 12.6,
+      "discount_rate": "30%",
+      "genre": "Romance"
+    },
+    {
+      "id": 17,
+      "image": "romance3.jpg",
+      "name": "Pride and Prejudice",
+      "author": "Jane Austen",
+      "price": 15.0,
+      "discounted_price": 10.5,
+      "discount_rate": "30%",
+      "genre": "Romance"
+    },
+    {
+      "id": 18,
+      "image": "romance4.jpg",
+      "name": "Twilight",
+      "author": "Stephenie Meyer",
+      "price": 17.0,
+      "discounted_price": 11.9,
+      "discount_rate": "30%",
+      "genre": "Romance"
+    },
+    {
+      "id": 19,
+      "image": "romance5.jpg",
+      "name": "The Fault in Our Stars",
+      "author": "John Green",
+      "price": 20.0,
+      "discounted_price": 14.0,
+      "discount_rate": "30%",
+      "genre": "Romance"
+    },
+    {
+      "id": 20,
+      "image": "romance6.jpg",
+      "name": "It Ends With Us",
+      "author": "Colleen Hoover",
+      "price": 19.0,
+      "discounted_price": 13.3,
+      "discount_rate": "30%",
+      "genre": "Romance"
+    },
+    {
+      "id": 21,
+      "image": "romance7.jpg",
+      "name": "Beach Read",
+      "author": "Emily Henry",
+      "price": 18.0,
+      "discounted_price": 12.6,
+      "discount_rate": "30%",
+      "genre": "Romance"
+    },
+    {
+      "id": 22,
+      "image": "psychology1.jpg",
+      "name": "Thinking, Fast and Slow",
+      "author": "Daniel Kahneman",
+      "price": 25.0,
+      "discounted_price": 17.5,
+      "discount_rate": "30%",
+      "genre": "Psychology"
+    },
+    {
+      "id": 23,
+      "image": "psychology2.jpg",
+      "name": "Man's Search for Meaning",
+      "author": "Viktor E. Frankl",
+      "price": 20.0,
+      "discounted_price": 14.0,
+      "discount_rate": "30%",
+      "genre": "Psychology"
+    },
+    {
+      "id": 24,
+      "image": "psychology3.jpg",
+      "name": "The Power of Now",
+      "author": "Eckhart Tolle",
+      "price": 19.0,
+      "discounted_price": 13.3,
+      "discount_rate": "30%",
+      "genre": "Psychology"
+    },
+    {
+      "id": 25,
+      "image": "psychology4.jpg",
+      "name": "Atomic Habits",
+      "author": "James Clear",
+      "price": 21.0,
+      "discounted_price": 14.7,
+      "discount_rate": "30%",
+      "genre": "Psychology"
+    },
+    {
+      "id": 26,
+      "image": "psychology5.jpg",
+      "name": "The Subtle Art of Not Giving a F*ck",
+      "author": "Mark Manson",
+      "price": 22.0,
+      "discounted_price": 15.4,
+      "discount_rate": "30%",
+      "genre": "Psychology"
+    },
+    {
+      "id": 27,
+      "image": "psychology6.jpg",
+      "name": "Grit",
+      "author": "Angela Duckworth",
+      "price": 18.0,
+      "discounted_price": 12.6,
+      "discount_rate": "30%",
+      "genre": "Psychology"
+    },
+    {
+      "id": 28,
+      "image": "psychology7.jpg",
+      "name": "Quiet",
+      "author": "Susan Cain",
+      "price": 20.0,
+      "discounted_price": 14.0,
+      "discount_rate": "30%",
+      "genre": "Psychology"
+    },
+    {
+      "id": 29,
+      "image": "fiction1.jpg",
+      "name": "1984",
+      "author": "George Orwell",
+      "price": 17.0,
+      "discounted_price": 11.9,
+      "discount_rate": "30%",
+      "genre": "Fiction"
+    },
+    {
+      "id": 30,
+      "image": "fiction2.jpg",
+      "name": "To Kill a Mockingbird",
+      "author": "Harper Lee",
+      "price": 18.0,
+      "discounted_price": 12.6,
+      "discount_rate": "30%",
+      "genre": "Fiction"
+    },
+    {
+      "id": 31,
+      "image": "fiction3.jpg",
+      "name": "The Great Gatsby",
+      "author": "F. Scott Fitzgerald",
+      "price": 15.0,
+      "discounted_price": 10.5,
+      "discount_rate": "30%",
+      "genre": "Fiction"
+    },
+    {
+      "id": 32,
+      "image": "fiction4.jpg",
+      "name": "The Alchemist",
+      "author": "Paulo Coelho",
+      "price": 16.0,
+      "discounted_price": 11.2,
+      "discount_rate": "30%",
+      "genre": "Fiction"
+    },
+    {
+      "id": 33,
+      "image": "fiction5.jpg",
+      "name": "Life of Pi",
+      "author": "Yann Martel",
+      "price": 17.0,
+      "discounted_price": 11.9,
+      "discount_rate": "30%",
+      "genre": "Fiction"
+    },
+    {
+      "id": 34,
+      "image": "fiction6.jpg",
+      "name": "The Book Thief",
+      "author": "Markus Zusak",
+      "price": 19.0,
+      "discounted_price": 13.3,
+      "discount_rate": "30%",
+      "genre": "Fiction"
+    },
+    {
+      "id": 35,
+      "image": "fiction7.jpg",
+      "name": "The Midnight Library",
+      "author": "Matt Haig",
+      "price": 21.0,
+      "discounted_price": 14.7,
+      "discount_rate": "30%",
+      "genre": "Fiction"
+    },
+    {
+      "id": 36,
+      "image": "technology1.jpg",
+      "name": "Clean Code",
+      "author": "Robert C. Martin",
+      "price": 30.0,
+      "discounted_price": 21.0,
+      "discount_rate": "30%",
+      "genre": "Technology"
+    },
+    {
+      "id": 37,
+      "image": "technology2.jpg",
+      "name": "The Pragmatic Programmer",
+      "author": "Andrew Hunt",
+      "price": 28.0,
+      "discounted_price": 19.6,
+      "discount_rate": "30%",
+      "genre": "Technology"
+    },
+    {
+      "id": 38,
+      "image": "technology3.jpg",
+      "name": "Introduction to Algorithms",
+      "author": "Cormen et al.",
+      "price": 40.0,
+      "discounted_price": 28.0,
+      "discount_rate": "30%",
+      "genre": "Technology"
+    },
+    {
+      "id": 39,
+      "image": "technology4.jpg",
+      "name": "Design Patterns",
+      "author": "Erich Gamma",
+      "price": 32.0,
+      "discounted_price": 22.4,
+      "discount_rate": "30%",
+      "genre": "Technology"
+    },
+    {
+      "id": 40,
+      "image": "technology5.jpg",
+      "name": "Artificial Intelligence: A Modern Approach",
+      "author": "Stuart Russell",
+      "price": 35.0,
+      "discounted_price": 24.5,
+      "discount_rate": "30%",
+      "genre": "Technology"
+    }
+  ]
+  

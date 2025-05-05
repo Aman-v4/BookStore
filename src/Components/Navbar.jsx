@@ -1,8 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     return (
-        <header className="bg-white">
+        <header className="bg-white z-50 sticky top-0 ">
   <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
     <div className="flex h-16 items-center justify-between">
       <div className="md:flex md:items-center md:gap-12">
@@ -16,19 +17,32 @@ const Navbar = () => {
         <nav aria-label="Global">
           <ul className="flex items-center gap-10 text-sm">
             <li>
-              <a className="text-gray-600 font-medium transition hover:text-gray-500/75" href="#"> Explore All </a>
+              <Link
+                className="text-gray-600 font-medium transition hover:text-gray-500/75"
+                to="/Explore"> 
+                Explore All   
+              </Link>
             </li>
-
             <li>
-              <a className="text-gray-600 font-medium transition hover:text-gray-500/75" href="#"> Wishlist </a>
+              <Link
+                className="text-gray-600 font-medium transition hover:text-gray-500/75"
+                to="/Wishlist"> 
+                Wishlist   
+              </Link>
             </li>
-
             <li>
-              <a className="text-gray-600 font-medium transition hover:text-gray-500/75" href="#"> Cart </a>
+              <Link
+                className="text-gray-600 font-medium transition hover:text-gray-500/75"
+                to="/Cart"> 
+                Cart  
+              </Link>
             </li>
-
             <li>
-              <a className="text-gray-600 font-medium transition hover:text-gray-500/75" href="#"> Orders </a>
+              <Link
+                className="text-gray-600 font-medium transition hover:text-gray-500/75"
+                to="/Orders"> 
+                Orders
+              </Link>
             </li>
 
           </ul>
@@ -36,13 +50,13 @@ const Navbar = () => {
       </div>
 
       <div className="flex items-center gap-4">
-        <div className="sm:flex sm:gap-4">
-          <a
-            className="rounded-md bg-indigo-600 px-5 py-2.5 text-sm font-medium text-white shadow-sm"
-            href="#"
+        <div className="sm:flex sm:gap-4 ">
+          <Link
+            className="rounded-md bg-indigo-600 px-5 py-2.5 text-sm font-medium text-white shadow-sm hover:scale-95 active:scale-90 transition duration-300 ease-in-out"
+            to="/Login"
           >
             Login
-          </a>
+          </Link>
         </div>
 
         <div className="block md:hidden">
