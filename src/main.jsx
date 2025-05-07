@@ -1,13 +1,17 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.jsx'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import Explore from './Pages/Explore.jsx'
-import Wishlist from './Pages/Wishlist.jsx'
-import Cart from './Pages/Cart.jsx'
-import Orders from './Pages/Orders.jsx'
-import Login from './Pages/Login.jsx'
+import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
+import './index.css';
+import App from './App.jsx';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import Explore from './Pages/Explore.jsx';
+import Wishlist from './Pages/Wishlist.jsx';
+import Cart from './Pages/Cart.jsx';
+import Orders from './Pages/Orders.jsx';
+import Login from './Pages/Login.jsx';
+import ProductPage from './Pages/ProductPage.jsx';
+import { CartProvider } from './Context/CartContext.jsx';
+import { WishlistProvider } from './Context/WishlistContext.jsx'; 
+import { Auth0Provider } from '@auth0/auth0-react';
 
 
 const router = createBrowserRouter([
@@ -20,27 +24,41 @@ const router = createBrowserRouter([
     path: "/Explore"
   },
   {
-    element: <Wishlist/>,
+    element: <Wishlist />,
     path: "/Wishlist"
   },
   {
-    element: <Cart/>,
+    element: <Cart />,
     path: "/Cart"
   },
   {
-    element: <Orders/>,
+    element: <Orders />,
     path: "/Orders"
   },
   {
-    element: <Login/>,
+    element: <Login />,
     path: "/Login"
   },
-
-])
+  {
+    element: <ProductPage />,
+    path: "/product/:id"
+  }
+]);
 
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    
-    <RouterProvider router={router} />
-  </StrictMode>,
-)
+  <Auth0Provider
+          domain="dev-h5tjyw6sc0ba1xi5.us.auth0.com"
+          clientId="FJeVlmZ07worFTTtl1prq7Iuk77w0x14"
+          authorizationParams={{
+            redirect_uri: window.location.origin
+          }}
+        >
+    <CartProvider>
+      <WishlistProvider> 
+        
+          <RouterProvider router={router} />
+        
+      </WishlistProvider>
+    </CartProvider>
+  </Auth0Provider>
+);

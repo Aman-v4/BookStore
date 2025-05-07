@@ -1,403 +1,536 @@
 [
     {
       "id": 1,
-      "image": "thriller1.jpg",
+      "image": "https://placehold.co/200x300",
       "name": "The Silent Patient",
       "author": "Alex Michaelides",
       "price": 20.0,
       "discounted_price": 14.0,
       "discount_rate": "30%",
-      "genre": "Thriller"
+      "genre": "Thriller",
+      "description": "A psychological thriller about a woman who shoots her husband and refuses to speak ever again."
     },
     {
       "id": 2,
-      "image": "thriller2.jpg",
+      "image": "https://placehold.co/200x300",
       "name": "Gone Girl",
       "author": "Gillian Flynn",
       "price": 18.0,
       "discounted_price": 12.6,
       "discount_rate": "30%",
-      "genre": "Thriller"
+      "genre": "Thriller",
+      "description": "A mystery novel revolving around the disappearance of a woman, sparking a media frenzy."
     },
     {
       "id": 3,
-      "image": "thriller3.jpg",
+      "image": "https://placehold.co/200x300",
       "name": "The Girl on the Train",
       "author": "Paula Hawkins",
       "price": 22.0,
       "discounted_price": 15.4,
       "discount_rate": "30%",
-      "genre": "Thriller"
+      "genre": "Thriller",
+      "description": "A psychological thriller that explores the complex relationships between three women."
     },
     {
       "id": 4,
-      "image": "thriller4.jpg",
+      "image": "https://placehold.co/200x300",
       "name": "Before I Go to Sleep",
       "author": "S.J. Watson",
       "price": 19.0,
       "discounted_price": 13.3,
       "discount_rate": "30%",
-      "genre": "Thriller"
+      "genre": "Thriller",
+      "description": "A woman with amnesia tries to piece together her life, only to discover unsettling truths."
     },
     {
       "id": 5,
-      "image": "thriller5.jpg",
+      "image": "https://placehold.co/200x300",
       "name": "The Couple Next Door",
       "author": "Shari Lapena",
       "price": 17.0,
       "discounted_price": 11.9,
       "discount_rate": "30%",
-      "genre": "Thriller"
+      "genre": "Thriller",
+      "description": "A couple’s baby goes missing, and their lives spiral as they become suspects in the crime."
     },
     {
       "id": 6,
-      "image": "thriller6.jpg",
+      "image": "https://placehold.co/200x300",
       "name": "Behind Closed Doors",
       "author": "B.A. Paris",
       "price": 21.0,
       "discounted_price": 14.7,
       "discount_rate": "30%",
-      "genre": "Thriller"
+      "genre": "Thriller",
+      "description": "A psychological thriller about a seemingly perfect marriage hiding dark secrets."
     },
     {
       "id": 7,
-      "image": "thriller7.jpg",
+      "image": "https://placehold.co/200x300",
       "name": "The Reversal",
       "author": "Michael Connelly",
       "price": 23.0,
       "discounted_price": 16.1,
       "discount_rate": "30%",
-      "genre": "Thriller"
+      "genre": "Thriller",
+      "description": "A criminal defense attorney is recruited to help clear the name of a convicted criminal."
     },
     {
       "id": 8,
-      "image": "manga1.jpg",
+      "image": "https://placehold.co/200x300",
+      "name": "The Woman in the Window",
+      "author": "A.J. Finn",
+      "price": 25.0,
+      "discounted_price": 17.5,
+      "discount_rate": "30%",
+      "genre": "Thriller",
+      "description": "A woman, confined to her home, believes she has witnessed a crime in the house next door."
+    },
+  
+    {
+      "id": 9,
+      "image": "https://placehold.co/200x300",
       "name": "Naruto Vol. 1",
       "author": "Masashi Kishimoto",
       "price": 10.0,
       "discounted_price": 7.0,
       "discount_rate": "30%",
-      "genre": "Manga"
+      "genre": "Manga",
+      "description": "The story of Naruto Uzumaki, a young ninja determined to become the Hokage of his village."
     },
     {
-      "id": 9,
-      "image": "manga2.jpg",
+      "id": 10,
+      "image": "https://placehold.co/200x300",
       "name": "Attack on Titan Vol. 1",
       "author": "Hajime Isayama",
       "price": 12.0,
       "discounted_price": 8.4,
       "discount_rate": "30%",
-      "genre": "Manga"
+      "genre": "Manga",
+      "description": "Humanity fights to survive against titans, giant humanoid creatures that eat people."
     },
     {
-      "id": 10,
-      "image": "manga3.jpg",
+      "id": 11,
+      "image": "https://placehold.co/200x300",
       "name": "Death Note Vol. 1",
       "author": "Tsugumi Ohba",
       "price": 11.0,
       "discounted_price": 7.7,
       "discount_rate": "30%",
-      "genre": "Manga"
+      "genre": "Manga",
+      "description": "A high school student gains the power to kill anyone whose name he writes in a mysterious notebook."
     },
     {
-      "id": 11,
-      "image": "manga4.jpg",
+      "id": 12,
+      "image": "https://placehold.co/200x300",
       "name": "One Piece Vol. 1",
       "author": "Eiichiro Oda",
       "price": 13.0,
       "discounted_price": 9.1,
       "discount_rate": "30%",
-      "genre": "Manga"
+      "genre": "Manga",
+      "description": "Monkey D. Luffy sets off on a journey to find the legendary treasure, the One Piece, and become the Pirate King."
     },
     {
-      "id": 12,
-      "image": "manga5.jpg",
+      "id": 13,
+      "image": "https://placehold.co/200x300",
       "name": "Bleach Vol. 1",
       "author": "Tite Kubo",
       "price": 10.0,
       "discounted_price": 7.0,
       "discount_rate": "30%",
-      "genre": "Manga"
+      "genre": "Manga",
+      "description": "Ichigo Kurosaki, a teenager with the ability to see ghosts, becomes a Soul Reaper to protect the living."
     },
     {
-      "id": 13,
-      "image": "manga6.jpg",
+      "id": 14,
+      "image": "https://placehold.co/200x300",
       "name": "Demon Slayer Vol. 1",
       "author": "Koyoharu Gotouge",
       "price": 14.0,
       "discounted_price": 9.8,
       "discount_rate": "30%",
-      "genre": "Manga"
+      "genre": "Manga",
+      "description": "Tanjiro Kamado becomes a demon slayer to avenge his family and cure his sister, who has been turned into a demon."
     },
     {
-      "id": 14,
-      "image": "manga7.jpg",
+      "id": 15,
+      "image": "https://placehold.co/200x300",
       "name": "My Hero Academia Vol. 1",
       "author": "Kohei Horikoshi",
       "price": 13.0,
       "discounted_price": 9.1,
       "discount_rate": "30%",
-      "genre": "Manga"
+      "genre": "Manga",
+      "description": "In a world where people have superpowers called Quirks, Izuku Midoriya dreams of becoming a hero."
     },
     {
-      "id": 15,
-      "image": "romance1.jpg",
+      "id": 16,
+      "image": "https://placehold.co/200x300",
+      "name": "Tokyo Ghoul Vol. 1",
+      "author": "Sui Ishida",
+      "price": 15.0,
+      "discounted_price": 10.5,
+      "discount_rate": "30%",
+      "genre": "Manga",
+      "description": "Ken Kaneki becomes a half-ghoul after a deadly encounter, struggling to live between human and ghoul worlds."
+    },
+  
+    {
+      "id": 17,
+      "image": "https://placehold.co/200x300",
       "name": "The Notebook",
       "author": "Nicholas Sparks",
       "price": 16.0,
       "discounted_price": 11.2,
       "discount_rate": "30%",
-      "genre": "Romance"
+      "genre": "Romance",
+      "description": "A heartwarming love story about a couple’s enduring romance despite challenges over the years."
     },
     {
-      "id": 16,
-      "image": "romance2.jpg",
+      "id": 18,
+      "image": "https://placehold.co/200x300",
       "name": "Me Before You",
       "author": "Jojo Moyes",
       "price": 18.0,
       "discounted_price": 12.6,
       "discount_rate": "30%",
-      "genre": "Romance"
+      "genre": "Romance",
+      "description": "A woman becomes a caregiver to a man who is paralyzed, leading to an unexpected and life-changing romance."
     },
     {
-      "id": 17,
-      "image": "romance3.jpg",
+      "id": 19,
+      "image": "https://placehold.co/200x300",
       "name": "Pride and Prejudice",
       "author": "Jane Austen",
       "price": 15.0,
       "discounted_price": 10.5,
       "discount_rate": "30%",
-      "genre": "Romance"
+      "genre": "Romance",
+      "description": "A classic love story of Elizabeth Bennet and Mr. Darcy, filled with wit, humor, and social commentary."
     },
     {
-      "id": 18,
-      "image": "romance4.jpg",
+      "id": 20,
+      "image": "https://placehold.co/200x300",
       "name": "Twilight",
       "author": "Stephenie Meyer",
       "price": 17.0,
       "discounted_price": 11.9,
       "discount_rate": "30%",
-      "genre": "Romance"
+      "genre": "Romance",
+      "description": "A teenager falls in love with a vampire, beginning an intense and dangerous relationship."
     },
     {
-      "id": 19,
-      "image": "romance5.jpg",
+      "id": 21,
+      "image": "https://placehold.co/200x300",
       "name": "The Fault in Our Stars",
       "author": "John Green",
       "price": 20.0,
       "discounted_price": 14.0,
       "discount_rate": "30%",
-      "genre": "Romance"
-    },
-    {
-      "id": 20,
-      "image": "romance6.jpg",
-      "name": "It Ends With Us",
-      "author": "Colleen Hoover",
-      "price": 19.0,
-      "discounted_price": 13.3,
-      "discount_rate": "30%",
-      "genre": "Romance"
-    },
-    {
-      "id": 21,
-      "image": "romance7.jpg",
-      "name": "Beach Read",
-      "author": "Emily Henry",
-      "price": 18.0,
-      "discounted_price": 12.6,
-      "discount_rate": "30%",
-      "genre": "Romance"
+      "genre": "Romance",
+      "description": "A poignant love story about two teenagers battling cancer and learning to live with the reality of their illnesses."
     },
     {
       "id": 22,
-      "image": "psychology1.jpg",
-      "name": "Thinking, Fast and Slow",
-      "author": "Daniel Kahneman",
-      "price": 25.0,
-      "discounted_price": 17.5,
+      "image": "https://placehold.co/200x300",
+      "name": "Outlander",
+      "author": "Diana Gabaldon",
+      "price": 24.0,
+      "discounted_price": 16.8,
       "discount_rate": "30%",
-      "genre": "Psychology"
+      "genre": "Romance",
+      "description": "A time-traveling historical romance where a woman from the 1940s finds herself in 18th-century Scotland."
     },
     {
       "id": 23,
-      "image": "psychology2.jpg",
-      "name": "Man's Search for Meaning",
-      "author": "Viktor E. Frankl",
-      "price": 20.0,
-      "discounted_price": 14.0,
-      "discount_rate": "30%",
-      "genre": "Psychology"
-    },
-    {
-      "id": 24,
-      "image": "psychology3.jpg",
-      "name": "The Power of Now",
-      "author": "Eckhart Tolle",
+      "image": "https://placehold.co/200x300",
+      "name": "The Rosie Project",
+      "author": "Graeme Simsion",
       "price": 19.0,
       "discounted_price": 13.3,
       "discount_rate": "30%",
-      "genre": "Psychology"
+      "genre": "Romance",
+      "description": "A socially awkward genetics professor embarks on a quest to find a wife, with unexpected results."
     },
     {
+      "id": 24,
+      "image": "https://placehold.co/200x300",
+      "name": "Fifty Shades of Grey",
+      "author": "E.L. James",
+      "price": 22.0,
+      "discounted_price": 15.4,
+      "discount_rate": "30%",
+      "genre": "Romance",
+      "description": "A passionate and complicated romance between a young woman and a wealthy businessman."
+    },
+  
+    {
       "id": 25,
-      "image": "psychology4.jpg",
+      "image": "https://placehold.co/200x300",
+      "name": "Thinking, Fast and Slow",
+      "author": "Daniel Kahneman",
+      "price": 30.0,
+      "discounted_price": 21.0,
+      "discount_rate": "30%",
+      "genre": "Psychology",
+      "description": "A groundbreaking exploration of how we think, exploring the two systems of thinking that drive our decisions."
+    },
+    {
+      "id": 26,
+      "image": "https://placehold.co/200x300",
+      "name": "The Power of Habit",
+      "author": "Charles Duhigg",
+      "price": 20.0,
+      "discounted_price": 14.0,
+      "discount_rate": "30%",
+      "genre": "Psychology",
+      "description": "A deep dive into the science of habits, explaining how they work and how we can change them."
+    },
+    {
+      "id": 27,
+      "image": "https://placehold.co/200x300",
+      "name": "Influence",
+      "author": "Robert B. Cialdini",
+      "price": 18.0,
+      "discounted_price": 12.6,
+      "discount_rate": "30%",
+      "genre": "Psychology",
+      "description": "A classic work on the psychology of persuasion, explaining the six principles that drive people to say 'yes.'"
+    },
+    {
+      "id": 28,
+      "image": "https://placehold.co/200x300",
       "name": "Atomic Habits",
       "author": "James Clear",
       "price": 21.0,
       "discounted_price": 14.7,
       "discount_rate": "30%",
-      "genre": "Psychology"
-    },
-    {
-      "id": 26,
-      "image": "psychology5.jpg",
-      "name": "The Subtle Art of Not Giving a F*ck",
-      "author": "Mark Manson",
-      "price": 22.0,
-      "discounted_price": 15.4,
-      "discount_rate": "30%",
-      "genre": "Psychology"
-    },
-    {
-      "id": 27,
-      "image": "psychology6.jpg",
-      "name": "Grit",
-      "author": "Angela Duckworth",
-      "price": 18.0,
-      "discounted_price": 12.6,
-      "discount_rate": "30%",
-      "genre": "Psychology"
-    },
-    {
-      "id": 28,
-      "image": "psychology7.jpg",
-      "name": "Quiet",
-      "author": "Susan Cain",
-      "price": 20.0,
-      "discounted_price": 14.0,
-      "discount_rate": "30%",
-      "genre": "Psychology"
+      "genre": "Psychology",
+      "description": "A practical guide to building good habits and breaking bad ones, based on scientific research."
     },
     {
       "id": 29,
-      "image": "fiction1.jpg",
-      "name": "1984",
-      "author": "George Orwell",
-      "price": 17.0,
-      "discounted_price": 11.9,
-      "discount_rate": "30%",
-      "genre": "Fiction"
-    },
-    {
-      "id": 30,
-      "image": "fiction2.jpg",
-      "name": "To Kill a Mockingbird",
-      "author": "Harper Lee",
-      "price": 18.0,
-      "discounted_price": 12.6,
-      "discount_rate": "30%",
-      "genre": "Fiction"
-    },
-    {
-      "id": 31,
-      "image": "fiction3.jpg",
-      "name": "The Great Gatsby",
-      "author": "F. Scott Fitzgerald",
-      "price": 15.0,
-      "discounted_price": 10.5,
-      "discount_rate": "30%",
-      "genre": "Fiction"
-    },
-    {
-      "id": 32,
-      "image": "fiction4.jpg",
-      "name": "The Alchemist",
-      "author": "Paulo Coelho",
-      "price": 16.0,
-      "discounted_price": 11.2,
-      "discount_rate": "30%",
-      "genre": "Fiction"
-    },
-    {
-      "id": 33,
-      "image": "fiction5.jpg",
-      "name": "Life of Pi",
-      "author": "Yann Martel",
-      "price": 17.0,
-      "discounted_price": 11.9,
-      "discount_rate": "30%",
-      "genre": "Fiction"
-    },
-    {
-      "id": 34,
-      "image": "fiction6.jpg",
-      "name": "The Book Thief",
-      "author": "Markus Zusak",
+      "image": "https://placehold.co/200x300",
+      "name": "Man's Search for Meaning",
+      "author": "Viktor Frankl",
       "price": 19.0,
       "discounted_price": 13.3,
       "discount_rate": "30%",
-      "genre": "Fiction"
+      "genre": "Psychology",
+      "description": "A psychological exploration of the human will to find meaning in life, even in the most difficult of circumstances."
     },
     {
-      "id": 35,
-      "image": "fiction7.jpg",
-      "name": "The Midnight Library",
-      "author": "Matt Haig",
-      "price": 21.0,
-      "discounted_price": 14.7,
+      "id": 30,
+      "image": "https://placehold.co/200x300",
+      "name": "Grit",
+      "author": "Angela Duckworth",
+      "price": 17.0,
+      "discounted_price": 11.9,
       "discount_rate": "30%",
-      "genre": "Fiction"
+      "genre": "Psychology",
+      "description": "An exploration of the power of perseverance and passion in achieving long-term goals."
     },
     {
-      "id": 36,
-      "image": "technology1.jpg",
-      "name": "Clean Code",
-      "author": "Robert C. Martin",
-      "price": 30.0,
-      "discounted_price": 21.0,
+      "id": 31,
+      "image": "https://placehold.co/200x300",
+      "name": "Quiet",
+      "author": "Susan Cain",
+      "price": 23.0,
+      "discounted_price": 16.1,
       "discount_rate": "30%",
-      "genre": "Technology"
+      "genre": "Psychology",
+      "description": "A look at the power of introverts in a world that values extroversion, exploring how introverts thrive."
     },
     {
-      "id": 37,
-      "image": "technology2.jpg",
+      "id": 32,
+      "image": "https://placehold.co/200x300",
+      "name": "Drive",
+      "author": "Daniel H. Pink",
+      "price": 24.0,
+      "discounted_price": 16.8,
+      "discount_rate": "30%",
+      "genre": "Psychology",
+      "description": "An exploration of the science behind motivation and how people are driven to succeed."
+    },
+  
+    {
+      "id": 33,
+      "image": "https://placehold.co/200x300",
       "name": "The Pragmatic Programmer",
-      "author": "Andrew Hunt",
+      "author": "Andrew Hunt, David Thomas",
       "price": 28.0,
       "discounted_price": 19.6,
       "discount_rate": "30%",
-      "genre": "Technology"
+      "genre": "Technology",
+      "description": "A timeless guide to being an effective and adaptable programmer, with practical advice on software development."
+    },
+    {
+      "id": 34,
+      "image": "https://placehold.co/200x300",
+      "name": "Clean Code",
+      "author": "Robert C. Martin",
+      "price": 25.0,
+      "discounted_price": 17.5,
+      "discount_rate": "30%",
+      "genre": "Technology",
+      "description": "A guide to writing clean, maintainable code and improving software quality."
+    },
+    {
+      "id": 35,
+      "image": "https://placehold.co/200x300",
+      "name": "You Don't Know JS",
+      "author": "Kyle Simpson",
+      "price": 20.0,
+      "discounted_price": 14.0,
+      "discount_rate": "30%",
+      "genre": "Technology",
+      "description": "An in-depth series about JavaScript, covering both fundamental and advanced concepts."
+    },
+    {
+      "id": 36,
+      "image": "https://placehold.co/200x300",
+      "name": "The Art of Computer Programming",
+      "author": "Donald E. Knuth",
+      "price": 50.0,
+      "discounted_price": 35.0,
+      "discount_rate": "30%",
+      "genre": "Technology",
+      "description": "A comprehensive series on algorithms and computer programming by one of the pioneers in the field."
+    },
+    {
+      "id": 37,
+      "image": "https://placehold.co/200x300",
+      "name": "Introduction to Algorithms",
+      "author": "Thomas H. Cormen, Charles E. Leiserson",
+      "price": 45.0,
+      "discounted_price": 31.5,
+      "discount_rate": "30%",
+      "genre": "Technology",
+      "description": "A textbook that provides comprehensive coverage of algorithms and data structures."
     },
     {
       "id": 38,
-      "image": "technology3.jpg",
-      "name": "Introduction to Algorithms",
-      "author": "Cormen et al.",
-      "price": 40.0,
-      "discounted_price": 28.0,
+      "image": "https://placehold.co/200x300",
+      "name": "The Mythical Man-Month",
+      "author": "Frederick P. Brooks Jr.",
+      "price": 30.0,
+      "discounted_price": 21.0,
       "discount_rate": "30%",
-      "genre": "Technology"
+      "genre": "Technology",
+      "description": "A collection of essays on software engineering, project management, and team dynamics."
     },
     {
       "id": 39,
-      "image": "technology4.jpg",
+      "image": "https://placehold.co/200x300",
       "name": "Design Patterns",
-      "author": "Erich Gamma",
-      "price": 32.0,
-      "discounted_price": 22.4,
+      "author": "Erich Gamma, Richard Helm",
+      "price": 38.0,
+      "discounted_price": 26.6,
       "discount_rate": "30%",
-      "genre": "Technology"
+      "genre": "Technology",
+      "description": "A guide to understanding and applying software design patterns for better system architecture."
     },
     {
       "id": 40,
-      "image": "technology5.jpg",
-      "name": "Artificial Intelligence: A Modern Approach",
-      "author": "Stuart Russell",
-      "price": 35.0,
-      "discounted_price": 24.5,
+      "image": "https://placehold.co/200x300",
+      "name": "Refactoring",
+      "author": "Martin Fowler",
+      "price": 33.0,
+      "discounted_price": 23.1,
       "discount_rate": "30%",
-      "genre": "Technology"
-    }
+      "genre": "Technology",
+      "description": "A book on improving the design of existing code without changing its behavior, using refactoring techniques."
+    },
+    {
+        "id": 41,
+        "image": "https://placehold.co/200x300",
+        "name": "The Great Gatsby",
+        "author": "F. Scott Fitzgerald",
+        "price": 15.0,
+        "discounted_price": 10.5,
+        "discount_rate": "30%",
+        "genre": "Fiction",
+        "description": "A story about the American dream, exploring themes of wealth, love, and betrayal in 1920s New York."
+      },
+      {
+        "id": 42,
+        "image": "https://placehold.co/200x300",
+        "name": "1984",
+        "author": "George Orwell",
+        "price": 18.0,
+        "discounted_price": 12.6,
+        "discount_rate": "30%",
+        "genre": "Fiction",
+        "description": "A dystopian novel about a totalitarian regime that uses surveillance and propaganda to control its citizens."
+      },
+      {
+        "id": 43,
+        "image": "https://placehold.co/200x300",
+        "name": "Pride and Prejudice",
+        "author": "Jane Austen",
+        "price": 14.0,
+        "discounted_price": 9.8,
+        "discount_rate": "30%",
+        "genre": "Fiction",
+        "description": "A classic novel of manners, dealing with themes of love, reputation, and class in early 19th century England."
+      },
+      {
+        "id": 44,
+        "image": "https://placehold.co/200x300",
+        "name": "Moby-Dick",
+        "author": "Herman Melville",
+        "price": 20.0,
+        "discounted_price": 14.0,
+        "discount_rate": "30%",
+        "genre": "Fiction",
+        "description": "The story of Captain Ahab's obsessive quest to kill the great white whale, Moby-Dick."
+      },
+      {
+        "id": 45,
+        "image": "https://placehold.co/200x300",
+        "name": "The Catcher in the Rye",
+        "author": "J.D. Salinger",
+        "price": 17.0,
+        "discounted_price": 11.9,
+        "discount_rate": "30%",
+        "genre": "Fiction",
+        "description": "A young man's journey through adolescence, dealing with themes of alienation, identity, and mental health."
+      },
+      {
+        "id": 46,
+        "image": "https://placehold.co/200x300",
+        "name": "The Lord of the Rings",
+        "author": "J.R.R. Tolkien",
+        "price": 35.0,
+        "discounted_price": 24.5,
+        "discount_rate": "30%",
+        "genre": "Fiction",
+        "description": "An epic high fantasy novel that follows a group of friends on a mission to destroy a powerful artifact and defeat evil forces."
+      },
+      {
+        "id": 47,
+        "image": "https://placehold.co/200x300",
+        "name": "Brave New World",
+        "author": "Aldous Huxley",
+        "price": 22.0,
+        "discounted_price": 15.4,
+        "discount_rate": "30%",
+        "genre": "Fiction",
+        "description": "A dystopian novel exploring themes of technology, control, and individual freedom in a future society."
+      },
+      {
+        "id": 48,
+        "image": "https://placehold.co/200x300",
+        "name": "To Kill a Mockingbird",
+        "author": "Harper Lee",
+        "price": 18.0,
+        "discounted_price": 12.6,
+        "discount_rate": "30%",
+        "genre": "Fiction",
+        "description": "A powerful tale of racism and justice in the American South, told through the eyes of a young girl."
+      }
+      
   ]
   

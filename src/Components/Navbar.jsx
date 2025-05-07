@@ -1,16 +1,20 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useAuth0 } from "@auth0/auth0-react";
 
 const Navbar = () => {
+  const { loginWithRedirect,isAuthenticated,logout,user } = useAuth0();
     return (
         <header className="bg-white z-50 sticky top-0 ">
   <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
     <div className="flex h-16 items-center justify-between">
       <div className="md:flex md:items-center md:gap-12">
-        <a className="block text-teal-600" href="#">
+        <Link 
+        to='/'
+        className="block text-teal-600" href="#">
           <span className="sr-only">Home</span>
           <img src='logo.svg' alt="Logo" className="h-8 w-auto" />
-        </a>
+        </Link>
       </div>
 
       <div className="hidden md:block">
@@ -51,12 +55,33 @@ const Navbar = () => {
 
       <div className="flex items-center gap-4">
         <div className="sm:flex sm:gap-4 ">
-          <Link
+        {
+          isAuthenticated ? (
+            <div className="flex items-center gap-2">
+              <p className='text-gray-600 font-medium'>
+                Welcome, {user.name}
+              </p>
+            </div>
+          ) : null
+        }
+        {
+          isAuthenticated ? (
+            
+          <button
             className="rounded-md bg-indigo-600 px-5 py-2.5 text-sm font-medium text-white shadow-sm hover:scale-95 active:scale-90 transition duration-300 ease-in-out"
-            to="/Login"
+            onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}
+          >
+            Logout
+          </button>
+          ):(
+            <button
+            className="rounded-md bg-indigo-600 px-5 py-2.5 text-sm font-medium text-white shadow-sm hover:scale-95 active:scale-90 transition duration-300 ease-in-out"
+            onClick={() => loginWithRedirect()}
           >
             Login
-          </Link>
+          </button>
+          )
+        }
         </div>
 
         <div className="block md:hidden">

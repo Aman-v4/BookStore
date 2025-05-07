@@ -1,8 +1,11 @@
 import React from 'react';
 import Navbar from '../Components/Navbar';
 import Footer from '../Components/Footer';
+import { Link } from 'react-router-dom';
 
 const LandingPage = () => {
+
+    
     const genres = [
         {
             id: 1,
@@ -26,7 +29,7 @@ const LandingPage = () => {
         },
         {
             id: 5,
-            name: "Philosophy",
+            name: "Psychology",
             bgImage:"philosophy.jpg",
         },
         {
@@ -41,42 +44,42 @@ const LandingPage = () => {
         {
             id: 1,
             name: "Harry Potter and the cursed child",
-            image:"harrypotter.jpg",
+            image:"https://placehold.co/200x300",
             price: "$14.99",
             label: "New",
         },
         {
             id: 1,
             name: "Harry Potter and the cursed child",
-            image:"harrypotter.jpg",
+            image:"https://placehold.co/200x300",
             price: "$14.99",
             label: "New",
         },
         {
             id: 1,
             name: "Harry Potter and the cursed child",
-            image:"harrypotter.jpg",
+            image:"https://placehold.co/200x300",
             price: "$14.99",
             label: "New",
         },
         {
             id: 1,
             name: "Harry Potter and the cursed child",
-            image:"harrypotter.jpg",
+            image:"https://placehold.co/200x300",
             price: "$14.99",
             label: "New",
         },
         {
             id: 1,
             name: "Harry Potter and the cursed child",
-            image:"harrypotter.jpg",
+            image:"https://placehold.co/200x300",
             price: "$14.99",
             label: "New",
         },
         {
             id: 1,
             name: "Harry Potter and the cursed child",
-            image:"harrypotter.jpg",
+            image:"https://placehold.co/200x300",
             price: "$14.99",
             label: "New",
         },
@@ -102,12 +105,12 @@ const LandingPage = () => {
                 </p>
 
                 <div className="mt-4 flex gap-4 sm:mt-6">
-                    <a
+                    <Link
                     className="hover:scale-90 active:scale-85 transition duration-300 ease-in-out inline-block rounded border border-indigo-600 bg-indigo-600 px-5 py-3 font-medium text-white shadow-sm "
-                    href="#"
+                    to="/Explore"
                     >
                     Explore All
-                    </a>
+                    </Link>
                 </div>
                 </div>
 
@@ -127,24 +130,26 @@ const LandingPage = () => {
                         Which Genre Are You Interested In?
                     </p>
                 </div>
-                <div className="mt-16 grid grid-cols-2 gap-y-8 sm:grid-cols-4  h-fit lg:grid-cols-6 ">
-                    {genres.map((genre) => (
-                        <div
-                        key={genre.id}
-                        className="relative w-full h-56 transition duration-300 ease-in-out active:scale-90 hover:scale-95 overflow-hidden cursor-pointer group"
-                        style={{
-                            backgroundImage: `url(${genre.bgImage})`,
-                            backgroundSize: 'cover',
-                            backgroundPosition: 'center',
-                        }}
-                        >
-                        {/* Sliding overlay on hover */}
-                        <div className="absolute inset-x-0 bottom-0 translate-y-full  group-hover:translate-y-0 transition-transform duration-300 bg-indigo-200/70 h-full flex items-center justify-center">
-                            <h3 className="text-xl font-semibold text-gray-900">{genre.name}</h3>
-                        </div>
-                        </div>
-                    ))}
+                <div className="mt-16 grid grid-cols-2 gap-y-8 sm:grid-cols-4 h-fit lg:grid-cols-6 ">
+                {genres.map((genre) => (
+                    <div
+                    className="relative w-full h-56 transition duration-300 ease-in-out active:scale-90 hover:scale-95 overflow-hidden group"
+                    style={{
+                        backgroundImage: `url(${genre.bgImage})`,
+                        backgroundSize: 'cover',
+                        backgroundPosition: 'center',
+                    }}
+                    >
+                    <div className="absolute inset-x-0 bottom-0 translate-y-full group-hover:translate-y-0 transition-transform duration-300 bg-indigo-200/70 h-full flex items-center justify-center">
+                        <h3 className="text-xl font-semibold text-gray-900">{genre.name}</h3>
+                    </div>
+                    </div>
+                ))}
                 </div>
+
+                <Link to="/Explore" className="mt-8 inline-block  text-indigo-600 font-medium hover:underline">
+                    View All Genres
+                </Link>
             </div>
         </section>
 
@@ -173,7 +178,7 @@ const LandingPage = () => {
                             <div className='flex justify-between'>
                                 <span className="bg-yellow-200 px-3 py-1.5 text-xs font-medium whitespace-nowrap">{product.label}</span>
                                 <button
-                                className=" hover:bg-pink-400 transition duration-300 rounded-full bg-gray-200 p-1.5 text-gray-900 transition hover:text-gray-900/75"
+                                className=" hover:bg-pink-400 transition duration-300 rounded-full bg-gray-200 p-1.5 text-gray-900 hover:text-gray-900/75"
                             >
                                 <span className="sr-only">Wishlist</span>
 
@@ -197,14 +202,6 @@ const LandingPage = () => {
                             <h3 className="mt-4 text-lg font-medium text-gray-900">{product.name}</h3>
 
                             <p className="mt-1.5 text-sm text-gray-700">{product.price}</p>
-
-                            <form className="mt-4">
-                                <button
-                                    className="block w-full rounded-sm bg-indigo-600 text-white hover:bg-indigo-500 p-4 text-sm font-medium transition hover:scale-95 active:scale-90 duration-300 ease-in-out"
-                                >
-                                    Add to Cart
-                                </button>
-                            </form>
                         </div>
                     </a>
                 ))}
