@@ -5,7 +5,6 @@ import Navbar from '../Components/Navbar';
 import Footer from '../Components/Footer';
 import axios from 'axios';
 
-// Group items by ID and count quantity
 const groupCartItems = (items) => {
   const grouped = {};
 
@@ -47,7 +46,6 @@ const Cart = () => {
         total
       };
 
-      // Send order data to backend
       const response = await axios.post('/api/add-order', order);
       if (response.status === 200) {
         alert('Order placed successfully!');
@@ -72,7 +70,7 @@ const Cart = () => {
           <p className="text-center text-gray-500 text-lg">Your cart is empty.</p>
         ) : (
           <div className="bg-white rounded-xl shadow-md p-6 space-y-4">
-            {/* Header */}
+           
             <div className="grid grid-cols-12 border-b pb-2 text-gray-500 text-sm font-medium">
               <div className="col-span-5">Item</div>
               <div className="col-span-2 text-center">Author</div>
@@ -81,7 +79,6 @@ const Cart = () => {
               <div className="col-span-2 text-center">Action</div>
             </div>
 
-            {/* Cart Rows */}
             {groupedItems.map((item) => (
               <div
                 key={item.id}

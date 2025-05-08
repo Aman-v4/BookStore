@@ -8,7 +8,6 @@ export const CartProvider = ({ children }) => {
   const { isAuthenticated, getAccessTokenSilently } = useAuth0();
   const [cartItems, setCartItems] = useState([]);
 
-  // Fetch cart on login
   useEffect(() => {
     const fetchCart = async () => {
       try {
@@ -29,13 +28,11 @@ export const CartProvider = ({ children }) => {
     }
   }, [isAuthenticated, getAccessTokenSilently]);
 
-  // Add item to cart
   const addToCart = async (book) => {
     try {
-      // Update locally
+      
       setCartItems((prev) => [...prev, book]);
 
-      // Update on the backend
       const token = await getAccessTokenSilently();
       await axios.post(
         'http://localhost:5000/api/add-to-cart',
@@ -75,7 +72,7 @@ export const CartProvider = ({ children }) => {
   const value = {
     cartItems,
     setCartItems,
-    addToCart,  // Added addToCart to the context value
+    addToCart,  
     removeFromCart,
   };
 

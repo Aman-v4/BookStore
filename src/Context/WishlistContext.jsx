@@ -8,7 +8,6 @@ export const WishlistProvider = ({ children }) => {
   const { isAuthenticated, getAccessTokenSilently } = useAuth0();
   const [wishlistItems, setWishlistItems] = useState([]);
 
-  // Fetch wishlist on login
   useEffect(() => {
     const fetchWishlist = async () => {
       try {
@@ -29,13 +28,11 @@ export const WishlistProvider = ({ children }) => {
     }
   }, [isAuthenticated, getAccessTokenSilently]);
 
-  // Add to Wishlist
   const addToWishlist = async (book) => {
     try {
-      // Optimistically update the wishlist state
+      
       setWishlistItems((prevItems) => [...prevItems, book]);
 
-      // Send the updated wishlist to the backend
       const token = await getAccessTokenSilently();
       await axios.post(
         'http://localhost:5000/api/wishlist',
@@ -51,7 +48,6 @@ export const WishlistProvider = ({ children }) => {
     }
   };
 
-  // Remove from Wishlist
   const removeFromWishlist = async (id) => {
     try {
       setWishlistItems((prev) => prev.filter((item) => item.id !== id));
@@ -73,7 +69,7 @@ export const WishlistProvider = ({ children }) => {
 
   const value = {
     wishlistItems,
-    addToWishlist,  // Add the function here
+    addToWishlist, 
     setWishlistItems,
     removeFromWishlist,
   };

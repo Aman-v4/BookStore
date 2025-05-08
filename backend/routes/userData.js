@@ -3,7 +3,6 @@ const router = express.Router();
 const UserData = require('../models/UserData');
 const checkJwt = require('../auth');
 
-// Get user data (cart, wishlist, orders)
 router.get('/:userId', checkJwt, async (req, res) => {
   try {
     const { userId } = req.params;
@@ -65,7 +64,6 @@ router.post('/wishlist', checkJwt, async (req, res) => {
   }
 });
 
-// Save a new order to the user's history
 router.post('/add-order', checkJwt, async (req, res) => {
   const { items, total } = req.body;
   const userId = req.user.userId;
@@ -78,7 +76,7 @@ router.post('/add-order', checkJwt, async (req, res) => {
     }
 
     user.orderHistory.push({ items, total, date: new Date() });
-    user.cart = []; // clear the cart after placing the order
+    user.cart = []; 
     await user.save();
 
     res.status(200).json({ message: 'Order added successfully' });

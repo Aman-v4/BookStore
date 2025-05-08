@@ -1,25 +1,24 @@
 import React, { useState, useEffect } from 'react';
-import { useLocation } from 'react-router-dom'; // Import useLocation to read the query parameter
+import { useLocation } from 'react-router-dom'; 
 import Records from '../Books/BooksData.json';
 import Navbar from '../Components/Navbar';
 import Footer from '../Components/Footer';
 import { Link } from 'react-router-dom';
 
 const Explore = () => {
-  const location = useLocation(); // Get location object to access query parameters
+  const location = useLocation(); 
   const [selectedGenre, setSelectedGenre] = useState('All');
   const [sortOption, setSortOption] = useState('');
   const [currentPage, setCurrentPage] = useState(1);
   const booksPerPage = 12;
 
-  // Read the 'genre' query parameter from the URL
   useEffect(() => {
     const queryParams = new URLSearchParams(location.search);
     const genre = queryParams.get('genre');
     if (genre) {
       setSelectedGenre(genre);
     }
-  }, [location.search]); // Re-run effect when URL changes
+  }, [location.search]); 
 
   const genres = ['All', 'Thriller', 'Manga', 'Romance', 'Psychology', 'Fiction', 'Technology'];
 
