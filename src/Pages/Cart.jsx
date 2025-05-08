@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useCart } from '../Context/CartContext';
+import { useAuth0 } from "@auth0/auth0-react";
 import Navbar from '../Components/Navbar';
 import Footer from '../Components/Footer';
+import axios from 'axios';
 
 // Group items by ID and count quantity
 const groupCartItems = (items) => {
@@ -20,12 +22,45 @@ const groupCartItems = (items) => {
 
 const Cart = () => {
   const { cartItems, removeFromCart } = useCart();
+  const { user, isAuthenticated } = useAuth0();
+  const [loading, setLoading] = useState(false);
+
   const groupedItems = groupCartItems(cartItems);
 
   const subtotal = groupedItems.reduce((acc, item) => acc + item.price * item.quantity, 0);
   const tax = +(subtotal * 0.05).toFixed(2);
   const deliveryCharge = 30;
   const total = subtotal + tax + deliveryCharge;
+
+  const handleCheckout = async () => {
+    if (!isAuthenticated) {
+      alert('Please log in to proceed with the checkout');
+      return;
+    }
+
+    setLoading(true);
+
+    try {
+      const order = {
+        userId: user.sub,
+        items: cartItems,
+        total
+      };
+
+      // Send order data to backend
+      const response = await axios.post('/api/add-order', order);
+      if (response.status === 200) {
+        alert('Order placed successfully!');
+        // Clear cart after successful order
+        removeFromCart();
+      }
+    } catch (err) {
+      console.error('Error placing order:', err);
+      alert('Failed to place the order');
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
     <>
@@ -103,8 +138,12 @@ const Cart = () => {
                 <span>Total</span>
                 <span>₹{total.toFixed(2)}</span>
               </div>
-              <button className="w-full mt-4 bg-indigo-600 text-white py-2 rounded-md hover:bg-indigo-700 transition">
-                Proceed to Checkout
+              <button 
+                onClick={handleCheckout}
+                className="w-full mt-4 bg-indigo-600 text-white py-2 rounded-md hover:bg-indigo-700 transition"
+                disabled={loading}
+              >
+                {loading ? 'Processing...' : 'Proceed to Checkout'}
               </button>
             </div>
           </div>

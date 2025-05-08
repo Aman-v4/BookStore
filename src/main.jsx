@@ -12,6 +12,7 @@ import ProductPage from './Pages/ProductPage.jsx';
 import { CartProvider } from './Context/CartContext.jsx';
 import { WishlistProvider } from './Context/WishlistContext.jsx'; 
 import { Auth0Provider } from '@auth0/auth0-react';
+import { UserDataProvider } from './Context/UserDataContext.jsx';
 
 
 const router = createBrowserRouter([
@@ -50,15 +51,19 @@ createRoot(document.getElementById('root')).render(
           domain="dev-h5tjyw6sc0ba1xi5.us.auth0.com"
           clientId="FJeVlmZ07worFTTtl1prq7Iuk77w0x14"
           authorizationParams={{
-            redirect_uri: window.location.origin
+            redirect_uri: window.location.origin,
+            audience: "https://bookstore-api",
+            scope: "read:current_user update:current_user_metadata",
           }}
         >
-    <CartProvider>
-      <WishlistProvider> 
-        
-          <RouterProvider router={router} />
-        
-      </WishlistProvider>
-    </CartProvider>
+    <UserDataProvider>
+      <CartProvider>
+        <WishlistProvider> 
+          
+            <RouterProvider router={router} />
+          
+        </WishlistProvider>
+      </CartProvider>
+    </UserDataProvider>
   </Auth0Provider>
 );
