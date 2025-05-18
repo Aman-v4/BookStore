@@ -5,6 +5,8 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import cors from 'cors';
 import userRoutes from './routes/userRoutes.js';
+import cartRoutes from './routes/cartRoutes.js';
+import wishlistRoutes from './routes/wishlistRoutes.js';
 
 // Configure dotenv
 const __filename = fileURLToPath(import.meta.url);
@@ -21,6 +23,8 @@ app.use(cors());
 
 // API Routes
 app.use('/api/users', userRoutes);
+app.use('/api/cart', cartRoutes);
+app.use('/api/wishlist', wishlistRoutes);
 
 // Base route
 app.get('/', (req, res) => {

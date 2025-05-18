@@ -1,11 +1,15 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
+import { useCart } from '../context/CartContext';
+import { useWishlist } from '../context/WishlistContext';
 
 const Navbar = () => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const [dropdownOpen, setDropdownOpen] = useState(false);
     const { user, logout, getUserInitials } = useAuth();
+    const { cart, itemCount: cartCount } = useCart();
+    const { itemCount: wishlistCount } = useWishlist();
 
     const toggleMobileMenu = () => {
         setMobileMenuOpen(!mobileMenuOpen);
@@ -40,16 +44,26 @@ const Navbar = () => {
                                 </li>
                                 <li>
                                     <Link
-                                        className="text-gray-600 font-medium transition hover:text-gray-500/75"
+                                        className="text-gray-600 font-medium transition hover:text-gray-500/75 relative"
                                         to="/Wishlist"> 
-                                        Wishlist   
+                                        Wishlist
+                                        {wishlistCount > 0 && (
+                                            <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
+                                                {wishlistCount}
+                                            </span>
+                                        )}   
                                     </Link>
                                 </li>
                                 <li>
                                     <Link
-                                        className="text-gray-600 font-medium transition hover:text-gray-500/75"
+                                        className="text-gray-600 font-medium transition hover:text-gray-500/75 relative"
                                         to="/Cart"> 
-                                        Cart  
+                                        Cart
+                                        {cartCount > 0 && (
+                                            <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
+                                                {cartCount}
+                                            </span>
+                                        )}  
                                     </Link>
                                 </li>
                                 <li>
@@ -135,17 +149,27 @@ const Navbar = () => {
                         </Link>
                         <Link
                             to="/Wishlist"
-                            className="text-gray-600 font-medium transition hover:text-gray-500/75"
+                            className="text-gray-600 font-medium transition hover:text-gray-500/75 flex items-center"
                             onClick={() => setMobileMenuOpen(false)}
                         > 
                             Wishlist   
+                            {wishlistCount > 0 && (
+                                <span className="ml-2 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
+                                    {wishlistCount}
+                                </span>
+                            )}
                         </Link>
                         <Link
                             to="/Cart"
-                            className="text-gray-600 font-medium transition hover:text-gray-500/75"
+                            className="text-gray-600 font-medium transition hover:text-gray-500/75 flex items-center"
                             onClick={() => setMobileMenuOpen(false)}
                         > 
                             Cart  
+                            {cartCount > 0 && (
+                                <span className="ml-2 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
+                                    {cartCount}
+                                </span>
+                            )}
                         </Link>
                         <Link
                             to="/Orders"
