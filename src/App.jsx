@@ -9,10 +9,11 @@ import Cart from './Pages/Cart'
 import Orders from './Pages/Orders'
 import Login from './Pages/Login'
 import ProductPage from './Pages/ProductPage'
+import { AuthProvider } from './context/AuthContext'
 
 function App() {
   return (
-    <>
+    <AuthProvider>
       <Navbar/>
         <Routes>
           <Route path="/" element={<Landing_page />} />
@@ -22,10 +23,9 @@ function App() {
           <Route path="/Orders" element={<Orders />} />
           <Route path="/Login" element={<Login />} />
           <Route path="/product/:id" element={<ProductPage />} /> 
-
         </Routes>
       <Footer/>
-    </>
+    </AuthProvider>
   )
 }
 
