@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useCart } from '../context/CartContext';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { toast } from 'react-toastify';
 
@@ -8,6 +8,7 @@ const Cart = () => {
   const { cart, loading, removeFromCart, updateCartItem, clearCart } = useCart();
   const { user } = useAuth();
   const [isUpdating, setIsUpdating] = useState(false);
+  const navigate = useNavigate();
 
   if (!user) {
     return (
@@ -58,6 +59,14 @@ const Cart = () => {
         toast.error(result.error || 'Failed to clear cart');
       }
     }
+  };
+
+  const handleCheckout = () => {
+    if (cart.items.length === 0) {
+      toast.error('Your cart is empty');
+      return;
+    }
+    navigate('/Checkout');
   };
 
   if (loading || isUpdating) {
@@ -172,7 +181,10 @@ const Cart = () => {
                   <span>Total:</span>
                   <span>₹{cart.totalAmount}</span>
                 </div>
-                <button className="w-full mt-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700">
+                <button 
+                  onClick={handleCheckout}
+                  className="w-full mt-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700"
+                >
                   Proceed to Checkout
                 </button>
               </div>

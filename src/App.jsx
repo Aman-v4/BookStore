@@ -9,6 +9,7 @@ import Cart from './Pages/Cart'
 import Orders from './Pages/Orders'
 import Login from './Pages/Login'
 import ProductPage from './Pages/ProductPage'
+import Checkout from './Pages/Checkout'
 import { AuthProvider } from './context/AuthContext'
 import { CartProvider } from './context/CartContext'
 import { WishlistProvider } from './context/WishlistContext'
@@ -28,7 +29,8 @@ function App() {
             <Route path="/Cart" element={<Cart />} />
             <Route path="/Orders" element={<Orders />} />
             <Route path="/Login" element={<Login />} />
-            <Route path="/product/:id" element={<ProductPage />} /> 
+            <Route path="/product/:id" element={<ProductPage />} />
+            <Route path="/Checkout" element={<Checkout />} />
           </Routes>
           <Footer/>
           <ToastContainer position="bottom-right" autoClose={3000} />
