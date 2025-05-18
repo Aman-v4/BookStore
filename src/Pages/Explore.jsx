@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom'; 
 import Records from '../Books/BooksData.json';
-import Navbar from '../Components/Navbar';
-import Footer from '../Components/Footer';
 import { Link } from 'react-router-dom';
 
 const Explore = () => {
@@ -53,8 +51,6 @@ const Explore = () => {
 
   return (
     <>
-      <Navbar />
-
       <div className="flex flex-col lg:flex-row min-h-screen">
         <aside className="w-full lg:w-1/4 bg-gray-100 p-6 border-r border-gray-200 sticky top-20 h-screen">
           <h2 className="text-xl font-semibold mb-4">Filter By Genre</h2>
@@ -145,7 +141,6 @@ const Explore = () => {
         </main>
       </div>
 
-      <Footer />
     </>
   );
 };

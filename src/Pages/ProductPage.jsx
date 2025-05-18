@@ -1,14 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import Records from '../Books/BooksData.json';
-import Footer from '../Components/Footer';
-import Navbar from '../Components/Navbar';
-import { useCart } from '../Context/CartContext.jsx';
-import { useWishlist } from '../Context/WishlistContext.jsx'; // ✅ Import wishlist context
 
 const ProductPage = () => {
-  const { addToCart } = useCart();
-  const { addToWishlist } = useWishlist(); // ✅ Use wishlist context
 
   const { id } = useParams();
   const [book, setBook] = useState(null);
@@ -24,7 +18,6 @@ const ProductPage = () => {
 
   return (
     <>
-      <Navbar />
       <div className="flex flex-col items-center lg:flex-row py-32 px-8">
         <div className="w-full lg:w-1/2 mb-6 lg:mb-0">
           <img
@@ -62,7 +55,6 @@ const ProductPage = () => {
           </div>
         </div>
       </div>
-      <Footer />
     </>
   );
 };

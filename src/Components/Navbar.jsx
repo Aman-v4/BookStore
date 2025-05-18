@@ -1,9 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { useAuth0 } from "@auth0/auth0-react";
 
 const Navbar = () => {
-  const { loginWithRedirect,isAuthenticated,logout,user } = useAuth0();
     return (
         <header className="bg-white z-50 sticky top-0 ">
   <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
@@ -55,33 +53,12 @@ const Navbar = () => {
 
       <div className="flex items-center gap-4">
         <div className="sm:flex sm:gap-4 ">
-        {
-          isAuthenticated ? (
-            <div className="flex items-center gap-2">
-              <p className='text-gray-600 font-medium'>
-                Welcome, {user.name}
-              </p>
-            </div>
-          ) : null
-        }
-        {
-          isAuthenticated ? (
-            
-          <button
+        <Link
+            to="/Login"
             className="rounded-md bg-indigo-600 px-5 py-2.5 text-sm font-medium text-white shadow-sm hover:scale-95 active:scale-90 transition duration-300 ease-in-out"
-            onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}
-          >
-            Logout
-          </button>
-          ):(
-            <button
-            className="rounded-md bg-indigo-600 px-5 py-2.5 text-sm font-medium text-white shadow-sm hover:scale-95 active:scale-90 transition duration-300 ease-in-out"
-            onClick={() => loginWithRedirect()}
           >
             Login
-          </button>
-          )
-        }
+          </Link>
         </div>
 
         <div className="block md:hidden">
