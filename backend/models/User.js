@@ -58,7 +58,11 @@ const orderSchema = new mongoose.Schema({
   },
   paymentMethod: {
     type: String,
+<<<<<<< HEAD
     enum: ['credit_card', 'debit_card', 'paypal', 'cash_on_delivery'],
+=======
+    enum: ['credit_card', 'debit_card', 'paypal', 'cash_on_delivery', 'stripe'],
+>>>>>>> 2c68bbb (Clean repository state with Stripe integration and logout modal)
     default: 'cash_on_delivery'
   },
   orderNumber: {
