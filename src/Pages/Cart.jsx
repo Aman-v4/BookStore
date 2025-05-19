@@ -3,6 +3,8 @@ import { useCart } from '../context/CartContext';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { toast } from 'react-toastify';
+import { loadStripe } from '@stripe/stripe-js';
+
 
 const Cart = () => {
   const { cart, loading, removeFromCart, updateCartItem, clearCart } = useCart();
@@ -60,6 +62,10 @@ const Cart = () => {
       }
     }
   };
+
+const makePayment = async () => {
+  const stripe= await loadStripe('pk_test_51RQMfLFZKBm2CmJI9Wn9wZSsZurJxaq6uxZfDvBBUXgTqxPFoiv6rVgrXKALh1y3UMvEDGP8QnZEqiqHORyvEN2J00DyTz2t8P');
+}
 
   const handleCheckout = () => {
     if (cart.items.length === 0) {

@@ -47,20 +47,20 @@ const Orders = () => {
     }
   };
 
-  const getStatusColor = (status) => {
-    switch (status) {
-      case 'delivered':
-        return 'bg-green-100 text-green-800';
-      case 'shipped':
-        return 'bg-blue-100 text-blue-800';
-      case 'processing':
-        return 'bg-yellow-100 text-yellow-800';
-      case 'cancelled':
-        return 'bg-red-100 text-red-800';
-      default:
-        return 'bg-gray-100 text-gray-800';
-    }
-  };
+  // const getStatusColor = (status) => {
+  //   switch (status) {
+  //     case 'delivered':
+  //       return 'bg-green-100 text-green-800';
+  //     case 'shipped':
+  //       return 'bg-blue-100 text-blue-800';
+  //     case 'processing':
+  //       return 'bg-yellow-100 text-yellow-800';
+  //     case 'cancelled':
+  //       return 'bg-red-100 text-red-800';
+  //     default:
+  //       return 'bg-gray-100 text-gray-800';
+  //   }
+  // };
 
   const formatDate = (dateString) => {
     try {
@@ -112,9 +112,9 @@ const Orders = () => {
                       <p className="text-sm text-gray-500">Placed on {formatDate(order.createdAt)}</p>
                     </div>
                     <div className="flex items-center">
-                      <span className={`px-3 py-1 rounded-full text-xs font-medium ${getStatusColor(order.status)}`}>
+                      {/* <span className={`px-3 py-1 rounded-full text-xs font-medium ${getStatusColor(order.status)}`}>
                         {order.status.charAt(0).toUpperCase() + order.status.slice(1)}
-                      </span>
+                      </span> */}
                       <button
                         onClick={() => toggleOrderDetails(order._id)}
                         className="ml-4 text-indigo-600 hover:text-indigo-800 text-sm font-medium"
@@ -169,9 +169,9 @@ const Orders = () => {
                           <p className="text-sm text-gray-600">
                             Payment Method: {order.paymentMethod === 'razorpay' ? 'Online Payment' : 'Cash on Delivery'}
                           </p>
-                          <p className="text-sm text-gray-600">
+                          {/* <p className="text-sm text-gray-600">
                             Payment Status: {order.status === 'delivered' ? 'Paid' : 'Pending'}
-                          </p>
+                          </p> */}
                         </div>
                       </div>
                     </div>
