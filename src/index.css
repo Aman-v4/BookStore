@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-@import "tailwindcss";
-=======
 @import "tailwindcss";
 
 @keyframes bounceIn {
@@ -23,4 +20,3 @@
 .animate-bounce-in {
   animation: bounceIn 0.5s ease-out forwards;
 }
->>>>>>> 2c68bbb (Clean repository state with Stripe integration and logout modal)

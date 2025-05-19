@@ -9,11 +9,7 @@ import Cart from './Pages/Cart'
 import Orders from './Pages/Orders'
 import Login from './Pages/Login'
 import ProductPage from './Pages/ProductPage'
-<<<<<<< HEAD
-import Checkout from './Pages/Checkout'
-=======
 import OrderSuccess from './Pages/OrderSuccess'
->>>>>>> 2c68bbb (Clean repository state with Stripe integration and logout modal)
 import { AuthProvider } from './context/AuthContext'
 import { CartProvider } from './context/CartContext'
 import { WishlistProvider } from './context/WishlistContext'
@@ -34,11 +30,7 @@ function App() {
             <Route path="/Orders" element={<Orders />} />
             <Route path="/Login" element={<Login />} />
             <Route path="/product/:id" element={<ProductPage />} />
-<<<<<<< HEAD
-            <Route path="/Checkout" element={<Checkout />} />
-=======
             <Route path="/order-success" element={<OrderSuccess />} />
->>>>>>> 2c68bbb (Clean repository state with Stripe integration and logout modal)
           </Routes>
           <Footer/>
           <ToastContainer position="bottom-right" autoClose={3000} />

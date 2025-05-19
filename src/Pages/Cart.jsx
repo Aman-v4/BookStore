@@ -5,21 +5,15 @@ import { useAuth } from '../context/AuthContext';
 import { toast } from 'react-toastify';
 import { loadStripe } from '@stripe/stripe-js';
 
-<<<<<<< HEAD
-=======
 // Initialize Stripe with a valid formatted test key
 // NOTE: In production, use environment variables instead of hardcoded values
 const stripePromise = loadStripe('pk_test_51RQMfLFZKBm2CmJI9Wn9wZSsZurJxaq6uxZfDvBBUXgTqxPFoiv6rVgrXKALh1y3UMvEDGP8QnZEqiqHORyvEN2J00DyTz2t8P');
->>>>>>> 2c68bbb (Clean repository state with Stripe integration and logout modal)
 
 const Cart = () => {
   const { cart, loading, removeFromCart, updateCartItem, clearCart } = useCart();
   const { user } = useAuth();
   const [isUpdating, setIsUpdating] = useState(false);
-<<<<<<< HEAD
-=======
   const [processingPayment, setProcessingPayment] = useState(false);
->>>>>>> 2c68bbb (Clean repository state with Stripe integration and logout modal)
   const navigate = useNavigate();
 
   if (!user) {
@@ -73,28 +67,11 @@ const Cart = () => {
     }
   };
 
-<<<<<<< HEAD
-const makePayment = async () => {
-  const stripe= await loadStripe('pk_test_51RQMfLFZKBm2CmJI9Wn9wZSsZurJxaq6uxZfDvBBUXgTqxPFoiv6rVgrXKALh1y3UMvEDGP8QnZEqiqHORyvEN2J00DyTz2t8P');
-}
-
-  const handleCheckout = () => {
-=======
   const handleCheckout = async () => {
->>>>>>> 2c68bbb (Clean repository state with Stripe integration and logout modal)
     if (cart.items.length === 0) {
       toast.error('Your cart is empty');
       return;
     }
-<<<<<<< HEAD
-    navigate('/Checkout');
-  };
-
-  if (loading || isUpdating) {
-    return (
-      <div className="min-h-screen flex items-center justify-center">
-        <p className="text-lg">Loading...</p>
-=======
 
     try {
       setProcessingPayment(true);
@@ -146,7 +123,6 @@ const makePayment = async () => {
         <p className="text-lg">
           {processingPayment ? 'Preparing checkout...' : 'Loading...'}
         </p>
->>>>>>> 2c68bbb (Clean repository state with Stripe integration and logout modal)
       </div>
     );
   }
@@ -255,13 +231,6 @@ const makePayment = async () => {
                   <span>Total:</span>
                   <span>₹{cart.totalAmount}</span>
                 </div>
-<<<<<<< HEAD
-                <button 
-                  onClick={handleCheckout}
-                  className="w-full mt-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700"
-                >
-                  Proceed to Checkout
-=======
                 {cart.totalAmount < 50 && (
                   <div className="mt-2 p-2 bg-yellow-100 text-yellow-800 text-sm rounded">
                     Note: Minimum checkout amount with Stripe is ₹50. Please add more items to proceed.
@@ -276,7 +245,6 @@ const makePayment = async () => {
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
                     <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
                   </svg>
->>>>>>> 2c68bbb (Clean repository state with Stripe integration and logout modal)
                 </button>
               </div>
             </div>
