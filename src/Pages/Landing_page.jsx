@@ -45,7 +45,7 @@ const LandingPage = () => {
             >
                 <div className="max-w-prose text-left">
                 <h1 className="text-4xl font-bold text-gray-900 leading-13 sm:text-5xl">
-                    Discover Books That
+                    Discover Books Thatss
                     <strong className="text-indigo-600"> Inspire, </strong>
                     Entertain , and Change Your Life.
                 </h1>
