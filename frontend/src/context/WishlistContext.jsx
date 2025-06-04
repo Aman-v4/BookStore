@@ -7,7 +7,7 @@ export const useWishlist = () => {
   return useContext(WishlistContext);
 };
 
-const API_URL = 'http://localhost:5000/api';
+const API_URL = import.meta.env.VITE_API_URL + '/api';
 
 export const WishlistProvider = ({ children }) => {
   const [wishlist, setWishlist] = useState({ books: [] });
