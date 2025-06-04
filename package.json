@@ -1,46 +1,14 @@
 {
-  "name": "bookstore",
-  "private": true,
-  "version": "0.0.0",
+  "name": "bookstore-root",
+  "version": "1.0.0",
+  "description": "Bookstore application with frontend and backend",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "lint": "eslint .",
-    "preview": "vite preview",
-    "server": "node backend/server.js",
-    "import-books": "node backend/scripts/importBooks.js"
-  },
-  "dependencies": {
-    "@auth0/auth0-react": "^2.3.0",
-    "@barba/core": "^2.10.3",
-    "@stripe/stripe-js": "^7.3.0",
-    "@tailwindcss/vite": "^4.1.5",
-    "bcrypt": "^6.0.0",
-    "bcryptjs": "^2.4.3",
-    "cors": "^2.8.5",
-    "date-fns": "^4.1.0",
-    "dotenv": "^16.5.0",
-    "express": "^5.1.0",
-    "jsonwebtoken": "^9.0.2",
-    "mongoose": "^8.14.3",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "react-router-dom": "^7.5.3",
-    "react-toastify": "^10.0.6",
-    "stripe": "^15.4.0",
-    "tailwindcss": "^4.1.5"
+    "frontend": "cd frontend && npm run dev",
+    "backend": "cd backend && npm run dev",
+    "dev": "concurrently \"npm run frontend\" \"npm run backend\"",
+    "install-all": "npm install && cd frontend && npm install && cd ../backend && npm install"
   },
   "devDependencies": {
-    "@eslint/js": "^9.22.0",
-    "@types/react": "^19.0.10",
-    "@types/react-dom": "^19.0.4",
-    "@vitejs/plugin-react": "^4.3.4",
-    "eslint": "^9.22.0",
-    "eslint-plugin-react-hooks": "^5.2.0",
-    "eslint-plugin-react-refresh": "^0.4.19",
-    "globals": "^16.0.0",
-    "nodemon": "^3.1.10",
-    "vite": "^6.3.1"
-  },
-  "type": "module"
-}
+    "concurrently": "^8.2.2"
+  }
+} 

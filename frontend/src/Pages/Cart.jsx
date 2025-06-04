@@ -5,8 +5,6 @@ import { useAuth } from '../context/AuthContext';
 import { toast } from 'react-toastify';
 import { loadStripe } from '@stripe/stripe-js';
 
-// Initialize Stripe with a valid formatted test key
-// NOTE: In production, use environment variables instead of hardcoded values
 const stripePromise = loadStripe('pk_test_51RQMfLFZKBm2CmJI9Wn9wZSsZurJxaq6uxZfDvBBUXgTqxPFoiv6rVgrXKALh1y3UMvEDGP8QnZEqiqHORyvEN2J00DyTz2t8P');
 
 const Cart = () => {
