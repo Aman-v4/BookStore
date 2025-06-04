@@ -78,7 +78,7 @@ const Cart = () => {
       const stripe = await stripePromise;
       
       // Call your backend to create a checkout session
-      const response = await fetch('http://localhost:5000/api/stripe/create-checkout-session', {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/stripe/create-checkout-session`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
